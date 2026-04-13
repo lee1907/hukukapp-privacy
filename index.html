@@ -5,68 +5,118 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HukukApp — Gizlilik Politikası</title>
 <style>
-  body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.7; color: #333; }
-  h1 { color: #1A237E; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.7; color: #333; }
+  h1 { color: #1A237E; border-bottom: 2px solid #1A237E; padding-bottom: 10px; }
   h2 { color: #283593; margin-top: 30px; }
+  ul { padding-left: 20px; }
+  .update { color: #666; font-style: italic; }
+  .contact { background: #E8EAF6; padding: 15px; border-radius: 8px; margin-top: 20px; }
+  table { border-collapse: collapse; width: 100%; margin: 10px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+  th { background: #E8EAF6; }
 </style>
 </head>
 <body>
 
 <h1>HukukApp Gizlilik Politikası</h1>
-<p><strong>Son güncelleme:</strong> 29 Mart 2026</p>
+<p class="update">Son güncelleme: 13 Nisan 2026</p>
 
-<p>HukukApp olarak kullanıcılarımızın gizliliğine saygı duyuyor ve kişisel verilerini korumayı taahhüt ediyoruz. Bu gizlilik politikası, uygulamamızın hangi verileri topladığını, nasıl kullandığını ve nasıl koruduğunu açıklamaktadır.</p>
+<p>HukukApp ("Uygulama") olarak kullanıcılarımızın gizliliğine saygı duyuyor ve kişisel verilerini korumayı taahhüt ediyoruz. Bu gizlilik politikası, uygulamamızın hangi verileri topladığını, nasıl kullandığını, kimlerle paylaştığını ve nasıl koruduğunu açıklamaktadır.</p>
 
 <h2>1. Toplanan Veriler</h2>
-<p>HukukApp aşağıdaki kişisel bilgileri yalnızca uygulamanın işlevselliği için toplar:</p>
+
+<h3>1.1 Kullanıcı Tarafından Sağlanan Veriler</h3>
 <ul>
-  <li>Ad ve soyad</li>
-  <li>T.C. Kimlik numarası</li>
-  <li>Doğum tarihi ve yeri</li>
-  <li>Adres bilgileri</li>
-  <li>Telefon numarası</li>
-  <li>E-posta adresi</li>
-  <li>Meslek ve medeni durum</li>
+  <li><strong>Kimlik bilgileri:</strong> Ad ve soyad, T.C. Kimlik numarası, doğum tarihi ve yeri</li>
+  <li><strong>İletişim bilgileri:</strong> E-posta adresi, telefon numarası, adres (il, ilçe, mahalle, sokak, bina no, daire no, posta kodu)</li>
+  <li><strong>Profil bilgileri:</strong> Meslek, medeni durum</li>
+  <li><strong>Belgeler:</strong> Kullanıcının oluşturduğu hukuki evraklar ve form verileri</li>
+  <li><strong>AI sohbet mesajları:</strong> Hukuk asistanına sorulan sorular (yalnızca cihazda işlenir)</li>
 </ul>
 
-<h2>2. Verilerin Kullanımı</h2>
-<p>Toplanan veriler yalnızca aşağıdaki amaçlarla kullanılır:</p>
+<h3>1.2 Otomatik Olarak Toplanan Veriler</h3>
+<ul>
+  <li><strong>Uygulama kullanım verileri:</strong> Ekran görüntülenmeleri, özellik kullanım sıklığı</li>
+  <li><strong>Cihaz kimlikleri:</strong> Firebase Instance ID, FCM push bildirim token'ı</li>
+  <li><strong>Reklam kimliği:</strong> Google Advertising ID (AAID) — reklam gösterimi için</li>
+  <li><strong>Hata raporları:</strong> Uygulama çökme verileri, hata yığın izleri</li>
+</ul>
+
+<h2>2. Verilerin Kullanım Amaçları</h2>
 <ul>
   <li>Hukuki evrak şablonlarının otomatik doldurulması</li>
-  <li>Kullanıcı profilinin cihazda saklanması</li>
-  <li>Uygulama deneyiminin kişiselleştirilmesi</li>
+  <li>Kullanıcı profil yönetimi ve kimlik doğrulama</li>
+  <li>Verilerinizin cihazlar arası senkronizasyonu (isteğe bağlı)</li>
+  <li>Push bildirimleri gönderimi</li>
+  <li>Reklam gösterimi ve reklam performansı ölçümü</li>
+  <li>Uygulama performansının izlenmesi ve iyileştirilmesi</li>
+  <li>Hata tespiti ve çözümü</li>
+  <li>Abonelik ve satın alma işlemlerinin yönetimi</li>
 </ul>
 
-<h2>3. Verilerin Saklanması</h2>
-<p>Tüm kişisel veriler <strong>yalnızca kullanıcının cihazında</strong> şifreli olarak saklanır. Veriler hiçbir sunucuya gönderilmez, üçüncü taraflarla paylaşılmaz.</p>
+<h2>3. Verilerin Saklanması ve Güvenliği</h2>
+<ul>
+  <li>Kişisel verileriniz cihazınızda <strong>AES-256 şifreleme</strong> ile korunur.</li>
+  <li>T.C. Kimlik numarası <strong>Android Keystore / iOS Keychain</strong> ile şifrelenerek saklanır.</li>
+  <li>Tüm ağ iletişimi <strong>SSL/TLS</strong> ile şifrelenir.</li>
+  <li>Bulut senkronizasyonu etkinleştirildiğinde verileriniz Firebase Firestore'da Google'ın güvenlik standartlarında saklanır.</li>
+  <li>Parolalar SHA-256 ile salt kullanılarak hash'lenir; düz metin olarak saklanmaz.</li>
+</ul>
 
-<h2>4. Üçüncü Taraf Hizmetler</h2>
+<h2>4. Üçüncü Taraf Hizmetler ve Veri Paylaşımı</h2>
 <p>Uygulama aşağıdaki üçüncü taraf hizmetleri kullanmaktadır:</p>
+
+<table>
+<tr><th>Hizmet</th><th>Sağlayıcı</th><th>Amaç</th><th>Paylaşılan Veri</th></tr>
+<tr><td>Firebase Authentication</td><td>Google</td><td>Kullanıcı girişi</td><td>E-posta, telefon</td></tr>
+<tr><td>Cloud Firestore</td><td>Google</td><td>Bulut senkronizasyonu</td><td>Profil ve belge verileri</td></tr>
+<tr><td>Firebase Analytics</td><td>Google</td><td>Kullanım analizi</td><td>Anonim uygulama olayları</td></tr>
+<tr><td>Firebase Crashlytics</td><td>Google</td><td>Hata raporlama</td><td>Çökme verileri, hata izleri</td></tr>
+<tr><td>Firebase Cloud Messaging</td><td>Google</td><td>Push bildirimleri</td><td>FCM cihaz token'ı</td></tr>
+<tr><td>Firebase Remote Config</td><td>Google</td><td>Dinamik yapılandırma</td><td>Veri toplanmaz</td></tr>
+<tr><td>Google AdMob</td><td>Google</td><td>Reklam gösterimi</td><td>Reklam kimliği, cihaz bilgileri</td></tr>
+<tr><td>Google Play Billing</td><td>Google</td><td>Uygulama içi satın alma</td><td>Satın alma token'ları</td></tr>
+<tr><td>Google Sign-In</td><td>Google</td><td>Google ile giriş</td><td>E-posta, ad, profil fotoğrafı</td></tr>
+<tr><td>Sentry</td><td>Sentry.io</td><td>Hata izleme (opsiyonel)</td><td>Hata izleri, ortam bilgisi</td></tr>
+</table>
+
+<p><strong>Önemli:</strong> AI Hukuk Asistanı tamamen cihazınızda çalışır. Sohbet mesajlarınız hiçbir harici sunucuya gönderilmez.</p>
+
+<p>Google'ın gizlilik politikası: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a><br>
+Firebase gizlilik politikası: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></p>
+
+<h2>5. Reklamlar</h2>
+<p>Uygulama, Google AdMob aracılığıyla reklam göstermektedir. AdMob, reklam hedefleme amacıyla cihaz kimliğinizi (Google Advertising ID) kullanabilir. Premium veya VIP aboneler reklamsız deneyim yaşar. Reklam tercihlerinizi cihazınızın ayarlarından yönetebilirsiniz.</p>
+
+<h2>6. Uygulama İçi Satın Alma</h2>
+<p>Abonelik ve satın alma işlemleri Google Play Billing üzerinden gerçekleştirilir. Ödeme bilgileriniz HukukApp tarafından toplanmaz veya saklanmaz; yalnızca Google Play tarafından işlenir.</p>
+
+<h2>7. KVKK Kapsamındaki Haklarınız</h2>
+<p>6698 sayılı Kişisel Verilerin Korunması Kanunu madde 11 uyarınca aşağıdaki haklara sahipsiniz:</p>
 <ul>
-  <li><strong>Firebase (Google)</strong> — Bildirim hizmetleri için. Firebase'in gizlilik politikası: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></li>
-  <li><strong>Anthropic Claude API</strong> — Yapay zeka metin düzenleme özelliği için. Kullanıcının isteğiyle girdiği metin geçici olarak işlenir, saklanmaz.</li>
+  <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+  <li>Verilerinize erişim ve kopyasını talep etme</li>
+  <li>Verilerinizin düzeltilmesini veya silinmesini isteme</li>
+  <li>Veri işlemesine itiraz etme</li>
+  <li>Hesabınızı ve tüm verilerinizi kalıcı olarak silme</li>
 </ul>
+<p>Hesap silme işlemi: <strong>Ayarlar &gt; Hesabı Sil</strong> seçeneğinden gerçekleştirebilirsiniz. Silinen veriler cihazınızdan ve bulut yedeklemesinden kalıcı olarak kaldırılır.</p>
 
-<h2>5. Veri Güvenliği</h2>
-<p>Kişisel verileriniz AES-256 şifreleme ile cihazınızda korunmaktadır. Uygulama KVKK (6698 sayılı Kişisel Verilerin Korunması Kanunu) kapsamındaki yükümlülüklere uymaktadır.</p>
+<h2>8. Çocukların Gizliliği</h2>
+<p>HukukApp <strong>18 yaşın altındaki bireylere yönelik değildir</strong>. Uygulama T.C. Kimlik numarası gibi hassas kişisel veriler topladığından, yalnızca 18 yaş ve üzeri bireyler tarafından kullanılmalıdır. 18 yaşın altındaki bireylerden bilerek veri toplamayız.</p>
 
-<h2>6. Kullanıcı Hakları</h2>
-<p>Kullanıcılar her zaman:</p>
-<ul>
-  <li>Verilerine erişme hakkına sahiptir</li>
-  <li>Verilerini düzeltme hakkına sahiptir</li>
-  <li>Hesabını ve tüm verilerini silme hakkına sahiptir (uygulama içi "Hesabı Sil" seçeneği)</li>
-</ul>
+<h2>9. Veri Saklama Süresi</h2>
+<p>Kişisel verileriniz hesabınız aktif olduğu sürece saklanır. Hesabınızı sildiğinizde tüm verileriniz cihazınızdan ve varsa bulut yedeklemesinden kalıcı olarak silinir.</p>
 
-<h2>7. Çocukların Gizliliği</h2>
-<p>HukukApp 13 yaşın altındaki çocuklara yönelik değildir ve bu yaş grubundan bilerek veri toplamaz.</p>
+<h2>10. Politika Değişiklikleri</h2>
+<p>Bu politikada yapılacak değişiklikler bu sayfada yayımlanacaktır. Önemli değişiklikler uygulama içi bildirim ile duyurulacaktır. Uygulamayı kullanmaya devam etmeniz güncel politikayı kabul ettiğiniz anlamına gelir.</p>
 
-<h2>8. İletişim</h2>
-<p>Gizlilik politikamızla ilgili sorularınız için:<br>
-<strong>E-posta:</strong> alibykdag@gmail.com</p>
-
-<h2>9. Politika Değişiklikleri</h2>
-<p>Bu politikada yapılacak değişiklikler bu sayfada yayımlanacaktır. Uygulamayı kullanmaya devam etmeniz güncel politikayı kabul ettiğiniz anlamına gelir.</p>
+<div class="contact">
+  <h2>11. İletişim</h2>
+  <p>Gizlilik politikamızla ilgili sorularınız için:</p>
+  <p><strong>E-posta:</strong> hukukapp.app@gmail.com</p>
+  <p><strong>Veri Sorumlusu:</strong> HukukApp</p>
+</div>
 
 </body>
 </html>
